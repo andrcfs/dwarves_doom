@@ -1,11 +1,17 @@
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
 
+import 'game_scene.dart';
+
 class MyGame extends FlameGame {
   late final RouterComponent router;
 
   @override
   Future<void> onLoad() async {
+    camera.viewfinder.zoom = 2.0;
+    //camera.viewfinder.anchor = Anchor.topLeft;
+    //camera.viewfinder.position = Vector2.zero();
+
     router = RouterComponent(
       initialRoute: 'menu',
       routes: {
@@ -13,7 +19,7 @@ class MyGame extends FlameGame {
         'game': Route(() => GameScene()),
       },
     );
-    add(router);
+    world.add(router);
   }
 
   void startGame() {
