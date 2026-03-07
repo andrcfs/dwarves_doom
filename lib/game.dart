@@ -3,7 +3,7 @@ import 'package:flame/game.dart';
 
 import 'game_scene.dart';
 
-class MyGame extends FlameGame {
+class MyGame extends FlameGame with HasCollisionDetection {
   late final RouterComponent router;
 
   @override
