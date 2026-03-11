@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:dwarves_doom/components/npc_config.dart';
 import 'package:flame/components.dart';
 
 import 'components/npc.dart';
@@ -19,7 +20,7 @@ class GameScene extends Component with HasGameReference<MyGame> {
       const npcCount = 8;
       for (int i = 0; i < npcCount; i++) {
         final pos = positions[rng.nextInt(positions.length)];
-        add(Npc(position: pos.clone()));
+        add(Npc(position: pos.clone(), config: Npcs.basicNpc));
       }
     }
   }

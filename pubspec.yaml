@@ -25,4 +25,7 @@ flutter:
     - assets/
     - assets/tiles/
     - assets/images/
+    - assets/images/knight/
+    - assets/images/rogue/
+    - assets/images/wizard/
     - assets/images/tilesets/
